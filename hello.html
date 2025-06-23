@@ -12,11 +12,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <style>
-
-    html, body {
-  overflow-x: hidden;
-}
-
     body {
       font-family: 'Segoe UI', sans-serif;
     }
@@ -874,6 +869,278 @@
 </style>
 
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* Gallery Background */
+    #gallery {
+      background: url('ChatGPT Image Jun 15, 2025, 03_39_58 PM.png') center/cover no-repeat fixed;
+      padding: 80px 20px;
+    }
+
+    #gallery h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #ff5e00;
+      margin-bottom: 40px;
+    }
+
+    .gallery-swiper-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .gallery-swiper-box {
+      background: #111;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(255, 94, 0, 0.25);
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-swiper-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .gallery-swiper-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ff5e00;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 220px;
+    }
+
+    .swiper-slide {
+      background: #d12929;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .swiper-slide img:hover {
+      transform: scale(1.05);
+    }
+
+    .swiper-pagination {
+      bottom: 8px;
+    }
+
+    .swiper-pagination-bullet {
+      background: #ff5e00;
+      opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    /* Show More */
+    .gallery-swiper-box.hidden {
+      display: none;
+    }
+
+    #showMoreBtn {
+      margin: 40px auto 0;
+      display: block;
+      padding: 12px 24px;
+      background-color: #ff5e00;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #showMoreBtn:hover {
+      background-color: #ff7733;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: #111;
+      color: #fff;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-column {
+      flex: 1 1 300px;
+      margin: 20px;
+    }
+
+    .footer-column h3 {
+      color: #ff5e00;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-column ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-column ul li a:hover {
+      color: #ff5e00;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      padding-top: 15px;
+      margin-top: 30px;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .gallery-swiper-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-swiper-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .swiper {
+        height: 180px;
+      }
+
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-column {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<section id="gallery">
+  <h2>Our Gallery</h2>
+  <div class="gallery-swiper-grid" id="galleryGrid">
+    <!-- Repeat this box for each brand -->
+    <div class="gallery-swiper-box">
+      <div class="gallery-swiper-title">INFRA</div>
+      <div class="swiper gallery-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="infra1.jpeg" /></div>
+          <div class="swiper-slide"><img src="infra2.jpeg" /></div>
+          <div class="swiper-slide"><img src="infra3.jpeg" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Add more swiper boxes -->
+    <!-- Paste all your existing swiper boxes here -->
+    <!-- Keep first 4 normal, rest add class="gallery-swiper-box hidden" -->
+
+  </div>
+  <button id="showMoreBtn">Show More</button>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h3>About Us</h3>
+      <ul>
+        <li><a href="#">Company Info</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="#">Email: info@example.com</a></li>
+        <li><a href="#">Phone: +91-1234567890</a></li>
+        <li><a href="#">Location: India</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 Your Company. All rights reserved.
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  // Init Swipers
+  document.querySelectorAll('.gallery-swiper').forEach(swiperEl => {
+    new Swiper(swiperEl, {
+      loop: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: swiperEl.querySelector('.swiper-pagination'),
+        clickable: true
+      }
+    });
+  });
+
+  // Show More functionality
+  const btn = document.getElementById("showMoreBtn");
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".gallery-swiper-box.hidden").forEach(el => el.classList.remove("hidden"));
+    btn.style.display = "none";
+  });
+</script>
+
+
 
 <section id="gallery" style="padding: 60px 20px; background-color: #f9f9f9;">
   <div class="container" style="max-width: 1300px; margin: auto;">
@@ -884,17 +1151,6 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
       ">
-      <style>
-#gallery {
-  overflow-x: hidden;
-}
-</style>
-<style>.swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-</style>
 
       <!-- Repeat this swiper-box 8 times for 8 brands -->
       <div class="gallery-swiper-box">
@@ -1098,7 +1354,102 @@
 </section>
 
 
-  
+  <style>
+/* --- Responsive Grid --- */
+.gallery-swiper-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .gallery-swiper-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-swiper-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* --- Swiper size mobile --- */
+.gallery-swiper-box .swiper {
+  width: 100%;
+  height: 220px;
+}
+
+@media (max-width: 600px) {
+  .gallery-swiper-box .swiper {
+    height: 180px;
+  }
+}
+
+/* --- Footer Styling --- */
+.site-footer {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+.footer-column h3 {
+  color: #ff5e00;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #ff5e00;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+}
+</style>
 
 
 
